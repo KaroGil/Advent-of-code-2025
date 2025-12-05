@@ -1,6 +1,8 @@
 i = open("input.in").read().splitlines()
 count = 0
 
+i = [list(col) for col in i]
+
 def checkNeighbours(pos, grid):
     count_n = 0
     current = grid[pos[1]][pos[0]]
@@ -15,12 +17,23 @@ def checkNeighbours(pos, grid):
                 count_n += 1
     if count_n >= 4:
         return False
+    
+    grid[pos[1]][pos[0]] = 'x'
     return True
 
-for col in range(len(i)):
-    for row in range(len(i[col])):
+
+row, col = 0, 0
+while col < len(i):
+    if col < 0:
+        col = 0
+    while row < len(i[col]):
+        value = i[col][row]
         if checkNeighbours((row, col), i):
             count += 1
-
+            row = -1
+            col = 0
+        row += 1
+    row = 0
+    col += 1
 
 print(count)
