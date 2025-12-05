@@ -6,3 +6,4 @@
 |  02 | ⭐️⭐️ |  Python  | [day02](./day2/sol.py) |
 |  03 | ⭐️⭐️ |  Python  | [day03](./day3/sol.py) |
 |  04 | ⭐️⭐️ |  Python  | [day04](./day4/sol.py) |
+|  05 |        |  Python  | [day05](./day5/sol.py) |
